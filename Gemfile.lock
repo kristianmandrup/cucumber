@@ -3,8 +3,7 @@ GEM
   specs:
     builder (2.1.2)
     diff-lcs (1.1.2)
-    gemcutter (0.5.0)
-      json_pure
+    gemcutter (0.6.1)
     gherkin (2.2.0)
       trollop (~> 1.16.2)
     git (1.2.5)
@@ -43,13 +42,14 @@ PLATFORMS
 DEPENDENCIES
   builder (~> 2.1.2)
   diff-lcs (~> 1.1.2)
-  gherkin (~> 2.2.0)
-  jeweler (~> 1.4.0)
+  gemcutter (>= 0.6.0)
+  gherkin (>= 2.2.0)
+  jeweler (>= 1.4.0)
   json_pure (~> 1.4.3)
   nokogiri (~> 1.4.2)
   prawn (= 0.8.4)
   prawn-layout (= 0.8.4)
-  rake (~> 0.8.7)
+  rake (>= 0.8.7)
   rspec (~> 2.0.0.beta.19)
   spork (~> 0.8.4)
   syntax (~> 1.0.0)

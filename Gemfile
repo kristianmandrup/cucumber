@@ -1,14 +1,15 @@
 source "http://rubygems.org"
 
-gem 'gherkin', '~> 2.2.0'
+gem 'gherkin', '>= 2.2.0'
 gem 'term-ansicolor', '~> 1.0.5'
 gem 'builder', '~> 2.1.2'
 gem 'diff-lcs', '~> 1.1.2'
 gem 'json_pure', '~> 1.4.3'
+gem 'gemcutter', '>= 0.6.0'
 
 group :development do
-  gem 'rake', '~> 0.8.7'
-  gem 'jeweler', '~> 1.4.0'
+  gem 'rake', '>= 0.8.7'
+  gem 'jeweler', '>= 1.4.0'
   gem 'nokogiri', '~> 1.4.2'
   gem 'prawn', '= 0.8.4'
   gem 'prawn-layout', '= 0.8.4'

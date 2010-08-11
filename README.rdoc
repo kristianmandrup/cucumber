@@ -3,6 +3,42 @@
 The main website is at http://cukes.info/
 The documentation is at http://wiki.github.com/aslakhellesoy/cucumber/
 
+== Tags hash feature
+
+This 'version' of Cucumber enables hash tags. This feature is backwards compatible, as tags that are not hash items per se are treated
+as hash items of the kind: {key => true}. 
+
+=== Requirements
+
+This patch requires my version of Gherkin at http://github.com/kristianmandrup/gherkin 
+which adds Hash tags support for Gherkin.
+
+=== Usage example
+
+Example:
+
+@estimate:3 @authors:mikec;brianm @wip
+
+=== Specs that demonstrate Hash tags feature
+
+Specs are included to demonstrate the Hash tags feature. See the directory: spec/cucumber/ast/hash_tag
+
+<pre>
+$ rspec spec/cucumber/ast/hash_tag/feature_hash_tag_spec.rb 
+..
+
+Finished in 0.0245 seconds
+2 examples, 0 failures
+</pre>
+
+Snippet of code from spec factory:
+<pre>
+f = Ast::Feature.new(
+  background,
+  Ast::Comment.new("# My feature comment\n"),
+  Ast::Tags.new(6, ['one:1', 'two:2;3']),
+</pre>
+
 == Note on Patches/Pull Requests
  
 * Fork the project.
@@ -24,3 +60,4 @@ If you get errors about missing gems - just install them.
 
 Copyright (c) 2008,2009 Aslak Hellesøy. See LICENSE for details.
 
+*The Hash tags feature is donated to the Cucumber project by Kristian Mandrup. I hope it finds its way into an upcoming release!*

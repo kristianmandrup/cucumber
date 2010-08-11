@@ -37,6 +37,10 @@ module Cucumber
         end
       end
 
+      def visit_tag(tag_key, tag_value)
+        broadcast(tag_key, tag_value)
+      end
+
       def visit_tag_name(tag_name)
         broadcast(tag_name)
       end
