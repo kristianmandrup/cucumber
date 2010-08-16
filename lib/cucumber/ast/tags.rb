@@ -45,7 +45,9 @@ module Cucumber
         end
       end
 
-      def convert_val val
+      def convert_val val       
+        val.gsub! /--(.*)/, '\1' 
+        val.gsub! /..(.*)/, '\1' 
         is_numeric?(val) ? val.to_i : val
       end
 
