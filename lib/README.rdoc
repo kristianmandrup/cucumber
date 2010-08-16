@@ -4,6 +4,21 @@ This is the public API of Cucumber. The public API includes the classes, modules
 and methods you can use if you are a user of Cucumber. It also applies to you if
 you're developing a 3rd party tool that integrates with Cucumber.
 
+== Tags hash improvement
+
+This version of Cucumber uses a version of Gherkin which support Tag hashes, 
+which can also be found at github: kristianmandrup.     
+
+It will allow tags in this form:
+
+@status:..wip @authors:--brian_m;--sally_k @estimate:..3
+
+Where '..' or '--' can be used as spacing separators. The ';' is used to separate list values.
+You can perform tag comparisons, fx to run only the features/scenarios with tags that match
+certain criteria.
+
+$ cucumber --tags @status:wip @estimate>2 
+
 == Internal API
 
 Cucumber has more classes, modules and methods than what you can see in the public
